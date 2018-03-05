@@ -1,0 +1,28 @@
+.race-name {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.main-content {
+  padding-top: 1.5rem;
+}
+
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link { 
+  border-color: #8bc34a #e1e4e8 transparent;
+}
+
+.navbar {
+  background-color: #8ae88a !important;
+}
+
+.content {
+  padding-top: 10pt;
+}
+
+.navbar-brand {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2.25rem;
+  padding-bottom: 0;
+}

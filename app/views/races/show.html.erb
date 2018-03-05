@@ -1,0 +1,26 @@
+<div class="header text-center">
+  <h1 class="race-name"><%= @race.name %></h1>
+</div>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to 'About', race_path(@race), class: "nav-link active" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Course', race_course_path(@race), class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Results', race_results_path(@race), class: "nav-link" %>
+  </li>
+</ul>
+
+<div class="content">
+  <p>
+    <strong>Name:</strong>
+    <%= @race.name %>
+  </p>
+
+  <p>
+    <strong>Start datetime:</strong>
+    <%= @race.start_datetime %>
+  </p>
+</div>

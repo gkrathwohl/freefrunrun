@@ -1,0 +1,29 @@
+<h1>Manage Races</h1>
+<%= link_to('New Race', new_race_path, class: "btn btn-primary")%>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start datetime</th>
+      <th>Finish Codes</th>
+      <th>Time Race</th>
+      <th>Public URL</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @races.each do |race| %>
+      <tr>
+        <td><%= race.name %></td>
+        <td><%= race.start_datetime %></td>
+        <td><%= link_to 'QR Finish Codes', race_codes_path(race) %></td>
+        <td><%= link_to 'Time Race', race_timer_path(race)%></td>
+        <th><%= link_to 'Link', race %></th>
+        <td><%= link_to 'Edit', edit_race_path(race) %></td>
+        <td><%= link_to 'Delete', race, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freefunrun</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Open+Sans" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #page-1 {
+        /*background-color: #aeffae; #8ae88a; */
+        background: linear-gradient(#c7ffc7, #83ff51);
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #subtitle {
+        margin-bottom: 3rem;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      #sign-in {
+        position: fixed;
+        top: 10pt;
+        right: 20pt;
+      }
+
+      #learn-more {
+        /* background-color: #b88ce8; */
+        background-color: #7811e7;
+        color: antiquewhite;
+      }
+
+      #big-name {
+        margin: 0;
+        color: #884bc9;
+        padding-top: 30vh;
+        text-align: center;
+        width: 100%;
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 75pt;
+/* font-family: 'Open Sans', sans-serif; */
+      }
+    </style>
+
+    <!-- <script>
+      $(document).ready(function(){
+            $('#learn-more').click(function(event){
+              scrollDown();
+              event.preventDefault();
+            });
+          
+            function scrollDown() {
+              var vheight = $(window).height();
+              $('html, body').animate({
+                scrollTop: (Math.floor($(window).scrollTop() / vheight)+1) * vheight
+              }, 500);  
+            };
+      });
+    </script> -->
+  </head>
+
+  <body>
+    <div id="page-1">
+      <p id="big-name">Free Fun Run</p>
+      <div class="text-center">
+        <p id="subtitle">The easiest way to organize, time, and get results for a Fun Run.</p>
+        <a href="/users/sign_up"><button id="learn-more" class="btn btn-lg">Get Started</button></a>
+        <div id="sign-in"><a href="/users/sign_in">Sign In</a></div>
+      </div>
+    </div>
+    <!-- <div id="page-2">
+      <p class="big-name">Free Fun Run</p>
+    </div> -->
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<%= form_with(model: race, local: true) do |form| %>
+  <% if race.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(race.errors.count, "error") %> prohibited this race from being saved:</h2>
+
+      <ul>
+      <% race.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :race_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :start_datetime %>
+    <%= form.date_select :start_datetime, id: :race_start_datetime, class: "form-control" %>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create Race</button>
+<% end %>

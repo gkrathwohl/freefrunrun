@@ -1,0 +1,32 @@
+<style>
+  .place {
+    float: left;
+    outline-style: dotted;
+    outline-color: #aeaeae;
+    position: relative
+  }
+
+  .place p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+</style>
+
+<div class="instructions">
+  <h1>Place Tokens</h1>
+  <ol>
+    <li>Print out this sheet and cut apart each finish token.</li> 
+    <li>Hand out tokens to runners as they finish. </li>
+    <li>Runners can then use any smartphone to scan their code and enter their name.</li>
+  </ol>
+</div>
+<% @qrs.each_with_index do |qr, i| %>
+  <div class="place">
+    <%= image_tag qr %>
+    <p><%= (i + 1).ordinalize %> place</p>
+  </div>
+<% end %>
